@@ -2,6 +2,7 @@
 <html lang="en">
   <head lang="en">
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WEBSTUDIO</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -50,6 +51,18 @@
             </li>
           </ul>
         </address>
+        <button
+        class="menu-toggle js-open-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg
+          width="24"
+          height="24"
+          stroke="currentColor"          
+        ><use href="./images/icon.svg#icon-charm_menu-hamburger"></use>
+        </svg>
+      </button>
       </div>
     </header>
     <main>
@@ -61,7 +74,7 @@
         </div>       
       </section>
        <!-- Modal window -->
-        <div class="backdrop is-hidden" data-modal>
+        <!-- <div class="backdrop is-hidden" data-modal>
           <div class="modal">
             <button class="modal-close-button" type="button" data-modal-close>
               <svg class="modal-icon" width="8" height="8">
@@ -99,43 +112,43 @@
               <button type="submit" class="modal-button-send" name="Submit" value="">Send</button>
             </form>
           </div>
-        </div>
+        </div> -->
       <!-- About -->
       <section class="section">
         <div class="container about-container">
           <h2 class="visually-hidden">Advantages</h2>
           <ul class="about-list list">
-            <li class="about-item"><div class="about-icon"><svg height="64" width="64"><use href="./images/icon.svg#icon-antenna-1" ></use>
+            <li class="about-list_item"><div class="about-icon"><svg height="64" width="64"><use href="./images/icon.svg#icon-antenna-1" ></use>
             </svg></div>
-              <h3 class="header-three">Strategy</h3>
-              <p class="body-text">
+              <h3 class="about-list_title">Strategy</h3>
+              <p class="about-list_text">
                 Our goal is to identify the business problem to walk away with
                 the perfect and creative solution.
               </p>
             </li>
-            <li class="about-item"><div class="about-icon">
+            <li class="about-list_item"><div class="about-icon">
               <svg width="64" height="64"><use href="./images/icon.svg#icon-clock-1"></use></svg>
             </div>
-              <h3 class="header-three">Punctuality</h3>
-              <p class="body-text">
+              <h3 class="about-list_title">Punctuality</h3>
+              <p class="about-list_text">
                 Bring the key message to the brand's audience for the best price
                 within the shortest possible time.
               </p>
             </li>
-            <li class="about-item"><div class="about-icon">
+            <li class="about-list_item"><div class="about-icon">
               <svg width="64" height="64"><use href="./images/icon.svg#icon-diagram-1" ></use></svg>
             </div>
-              <h3 class="header-three">Diligence</h3>
-              <p class="body-text">
+              <h3 class="about-list_title">Diligence</h3>
+              <p class="about-list_text">
                 Research and confirm brands that present the strongest digital
                 growth opportunities and minimize risk.
               </p>
             </li>
-            <li class="about-item"><div class="about-icon">
+            <li class="about-list_item"><div class="about-icon">
               <svg width="64" height="64" ><use href="./images/icon.svg#icon-astronaut-1" ></use></svg>
             </div>
-              <h3 class="header-three">Technologies</h3>
-              <p class="body-text">
+              <h3 class="about-list_title">Technologies</h3>
+              <p class="about-list_text">
                 Design practice focused on digital experiences. We bring forth a
                 deep passion for problem-solving.
               </p>
@@ -174,7 +187,12 @@
           <h2 class="header-main-page">Our Team</h2>
           <ul class="team-list list">
             <li class="our-team-item">
-              <img src="./images/img.jpg" alt="man" />
+              <img 
+              srcset="./images/team/img-1_mob@1x.jpg 1x, ./images/team/img-1_mob@2x.jpg 2x"
+              src="./images/team/img-1_mob@1x.jpg" alt="man"
+              width="264px";
+              height="260px";
+               />
               <div class="team-wrapper">
                 <h3 class="header-three">Mark Guerrero</h3>
                 <p class="body-text">Product Designer</p>                     
@@ -210,7 +228,12 @@
                 </ul>          
               </div> 
             <li class="our-team-item">
-              <img src="./images/img2.jpg" alt="man" width="264" />
+              <img 
+              srcset="./images/team/img-2_mob@1x.jpg 1x, ./images/team/img-2_mob@2x.jpg 2x"
+              src="./images/team/img-2_mob@1x.jpg" alt="man"
+              width="264px";
+              height="260px";
+               />
               <div class="team-wrapper">
                 <h3 class="header-three">Tom Ford</h3>
                 <p class="body-text">Frontend Developer</p>
@@ -247,7 +270,12 @@
               </div>
             </li>
             <li class="our-team-item">
-              <img src="./images/img1.jpg" alt="whoman" width="264" />
+              <img 
+              srcset="./images/team/img-3_mob@1x.jpg 1x, ./images/team/img-3_mob@2x.jpg 2x"
+              src="./images/team/img-3_mob@1x.jpg" alt="whoman"
+              width="264px";
+              height="260px";
+               />
               <div class="team-wrapper">
                 <h3 class="header-three">Camila Garcia</h3>
                 <p class="body-text">Marketing</p>
@@ -284,7 +312,12 @@
               </div>
             </li>
             <li class="our-team-item">
-              <img src="./images/img(1).jpg" alt="man" width="264" />
+              <img 
+              srcset="./images/team/img-4_mob@1x.jpg 1x, ./images/team/img-4_mob@2x.jpg 2x"
+              src="./images/team/img-4_mob@1x.jpg" alt="man"
+              width="264px";
+              height="260px";
+               />
               <div class="team-wrapper">
                 <h3 class="header-three">Daniel Wilson</h3>
                 <p class="body-text">UI Designer</p>
@@ -395,7 +428,7 @@
               </li>
             </ul>
           </div>           
-          <form name="Subscribe">          
+          <form name="Subscribe" class="subscribe-form">          
             <p class="footer-title-sm">Subscribe</p>       
               <div class="subscribe-footer">
                 <label class="visually-hidden" for="email">Email</label>
@@ -407,7 +440,84 @@
           </form> 
         </div>                  
     </footer>
+    <!-- Mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="modal-icon" width="8" height="8">
+                <use href="./images/icon.svg#icon-close-black-18dp-2-1" clip-rule="evenodd"></use>
+              </svg>
+        <!-- <svg
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg> -->
+      </button>
+      <ul class="mobile-menu">
+        <li>
+          <a href="" class="link">Studio</a>
+        </li>
+        <li>
+          <a href="" class="link">Portfolio</a>
+        </li>
+        <li>
+          <a href="" class="link">Contacts</a>
+        </li>        
+      </ul>
+      <ul class="mobile-contacts list">
+        <li>
+          <a href="tel:+110001111111">+11 (000) 111-11-11</a>
+        </li>
+        <li>
+         <a href="mailto:">info@devstudio.com</a>
+        </li>
+      </ul>
+      <ul class="mobile-sm-list list">
+        <li class="team-sm-item link">
+          <a href="" target="_blank" rel="no opener no referer" class="team-sm-link">
+            <svg class="team-smm-icon" width="24" height="24">
+              <use href="./images/icon.svg#icon-instagram-2"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="team-sm-item link">
+          <a href="" target="_blank" rel="noopenner no referer" class="team-sm-link">
+            <svg class="team-smm-icon" width="24" height="24">
+              <use href="./images/icon.svg#icon-twitter-1"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="team-sm-item link">
+          <a href="" target="_blank" rel="no opener no referer" class="team-sm-link">
+            <svg class="team-smm-icon" width="24" height="24">
+              <use href="./images/icon.svg#icon-facebook-1"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="team-sm-item link">
+          <a href="" target="_blank" rel="no opener no referer" class="team-sm-link">
+            <svg class="team-smm-icon" width="24" height="24">
+              <use href="./images/icon.svg#icon-linkedin-1"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>           
  
