@@ -575,7 +575,13 @@ line-height: 1.11;
 }
 @media only screen and (min-width: 768px) {
   .team-list {
-    --items: 2; 
+    --items: 2;
+    
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+  .team-list {
+   --indent: 64px 24px; 
   }
 }
 @media only screen and (min-width: 1158px) {
@@ -697,7 +703,13 @@ transition: var(--transition-dur-and-func);
 
 .footer {
   background-color: var(--main-header-color);
-  padding: 100px 0;
+  padding: 96px 0;
+  
+}
+@media only screen and (min-width: 1158px) {
+  .footer {
+   padding: 100px 0; 
+  }
 }
 .logo-light {
   color: var(--light);
@@ -707,33 +719,43 @@ transition: var(--transition-dur-and-func);
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: var(--light);
+  color: var(--light);  
 }
-.footer--content {
+/* .footer--content {
    padding: 100px 0;  
-}
+} */
 .footer-logo {
   display: inline-block;
   margin-bottom: 16px;
+  /* margin-left: auto;
+  margin-right: auto; */
   padding: 0;
 }
 .footer-text {
-  max-width: 264px;
+  max-width: 264px;  
 }
-.footer.footer-content.logo {
+
+@media only screen and (min-width: 1158px) {
+  .footer-text {
+   max-width: 264px; 
+  }
+}
+
+/* .footer.footer-content.logo {
   padding-top: 0;
   padding-bottom: 0;
   
-}
+} */
 .footer-content {
   display: flex;
   flex-wrap: wrap;
   /* text-align: center; */
   gap: 72px 24px;
   /* gap: 120px; */
-  align-items: baseline;
+  /* align-items: baseline; */
 
 }
+
 .footer-title-sm {
 font-weight: 500;
 font-size: 16px;
@@ -742,10 +764,10 @@ letter-spacing: 0.02em;
 color: var(--white-background-color);
 margin-bottom: 16px;
 }
- 
-.footer-left-side {
-  margin-right: 24px;
-}
+
+  /* margin-right: 24px; */
+
+
 
 @media only screen and (min-width: 1158px) {
   .footer-left-side {
@@ -755,8 +777,13 @@ margin-bottom: 16px;
 .footer-right-side {
 display: inline-block;
 flex-wrap: wrap;
-margin-right: 80px;
+/* margin-right: 80px; */
 transition: background-color var(--transition-dur-and-func);
+}
+@media only screen and (min-width: 1158px) {
+  .footer-right-side {
+  margin-right: 80px;  
+  }
 }
 .footer-sm-list {
   height: 40px;  
@@ -783,7 +810,8 @@ transition: background-color var(--transition-dur-and-func);
 .subscribe-email {
 top: 0;
 left: 0;
-width: 264px;
+width: 398px;
+
 height: 40px;
 padding-top: 8px;
 padding-left: 16px;
@@ -794,6 +822,11 @@ border-radius: 4px;
 background-color: transparent;
 transition: border-color var(--transition-dur-and-func);
 color:  var(--white-background-color);
+}
+@media only screen and (min-width: 768px) {
+  .subscribe-email {
+    width: 264px;
+  }
 }
 .subscribe-email:focus {
   border: 1px solid var(--primary-brand-color);
