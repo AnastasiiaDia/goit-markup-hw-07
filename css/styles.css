@@ -161,7 +161,7 @@ img {
    display: flex;
    margin-right: auto;
    align-items: center;
-   gap: 40px;    */
+   gap: 40px;    
   }
 } 
 
@@ -409,11 +409,7 @@ img {
       --items: 2;
     } */
   
-    .about-list_item {
- /* width: calc((100%-3*24px)/4);  */
- /* width: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items)); */
-    
-}
+
 
 @media only screen and (min-width: 768px) {
   .about-list_item {
@@ -1275,7 +1271,7 @@ button {
   
   .menu-container {
     position: fixed;
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     left: 0;
     width: 100vw;
@@ -1295,7 +1291,7 @@ button {
   }
   
   .menu-container .menu-toggle {
-    height: ;: 100%;
+    height: 100%;
     position: absolute;
     top: 16px;
     right: 16px;
