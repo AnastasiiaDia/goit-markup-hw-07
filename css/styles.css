@@ -867,7 +867,8 @@ transition: background-color var(--transition-dur-and-func);
 .subscribe-email {
 top: 0;
 left: 0;
-width: 398px;
+width: auto;
+max-width: 398px;
 height: 40px;
 padding-top: 8px;
 padding-left: 16px;
@@ -1038,11 +1039,17 @@ button {
     background-color: rgba(46, 47, 66, 0.4);
     transition: opacity 300ms, visibility 300ms;
     opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
+    overflow: scroll;
+    
   }
   .modal {
     position: absolute;   
-    min-height: 576px;
-    width: 392px;
+    min-height: 576px;    
+    max-width: 392px;
+    width: 91%;
+    height: 74%;
     /* width: 408px;     */
     top: 50%;
     left: 50%;
@@ -1050,9 +1057,10 @@ button {
     background-color: rgba(252, 252, 252, 1);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px; 
-     
+    
     resize: none; 
     transform: translate(-50%, -50%);
+    transition: opacity 300ms, visibility 300ms;
     }
     @media only screen and (min-width: 768px) {
       .modal {
@@ -1064,9 +1072,10 @@ button {
     visibility: hidden;
     pointer-events: none;
   }
-  .backdrop.is-hidden {
-    transition: opacity 300ms, visibility 300ms; 
-  }
+  .backdrop.is-hidden .modal {
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    }
 
   .modal-close-button {   
     position: absolute; 
@@ -1235,6 +1244,7 @@ button {
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
       border-radius: 4px;
       margin: 0 auto;
+     
       transition: background-color var(--transition-dur-and-func);
     }
     .modal-button-send:hover,
@@ -1242,14 +1252,18 @@ button {
     .modal-button-send:active {
       background-color: var(--pressed-state-color);
     }
+    .backdrop > form {
+     margin-bottom: 54px; 
+    }
+    
    /**
      |============================
      | Mobile menu styles
      |============================
    */
    .menu-toggle {    
-    min-height: 40px;
-    min-width: 40px;
+    min-height: 24px;
+    min-width: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1289,6 +1303,7 @@ button {
     flex-direction: column;
     transform: translateX(100%);
     transition: transform 250ms ease-in-out;
+    
   }
   
   .menu-container.is-open {    
@@ -1296,7 +1311,7 @@ button {
   }
   
   .menu-container .menu-toggle {
-    height: 100%;
+    /* height: 100%; */
     position: absolute;
     top: 16px;
     right: 16px;
@@ -1309,14 +1324,14 @@ button {
     flex-direction: column;
     gap: 40px;
     padding: 0;
-    margin: 0;
     list-style: none;
-    margin-bottom: auto;
+    
+    /* margin-bottom: auto; */
   }
   
   .mobile-menu .link {
     display: block;
-    padding: 10px;
+    /* padding: 10px; */
     color: #fff;
     text-decoration: none;    
     font-weight: 700;
@@ -1333,7 +1348,7 @@ button {
       color: var(--primary-brand-color);
       width: 100%;
       height: 40px;
-      margin-bottom: 40px;
+            /* margin-bottom: 40px; */
     }
 
     .mobile-menu .link:hover,
@@ -1350,10 +1365,12 @@ button {
       display: flex;      
       margin-left: auto;
       margin-right: auto;
+      margin-top: 48px;
       margin-bottom: 40px;
       gap: 56px;
      }
      .mobile-contacts {
       text-decoration: none;
       margin-bottom: 40px;
+      margin-top: 48px;
      }
