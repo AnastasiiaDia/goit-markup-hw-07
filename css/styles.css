@@ -290,7 +290,7 @@ img {
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
-    line-height: 1.1;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     transition: color var(--transition-dur-and-func);}
 }
@@ -487,14 +487,15 @@ line-height: 1.11;
  font-weight: 500;
  font-size: 16px;
  line-height: 1.5;
+ letter-spacing: 0.02em;
+  color: var(--body-text-color);
 }
 @media only screen and (min-width: 1158px) {
   .about-list_text {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--body-text-color);
+  
   }
 } 
 
@@ -1095,7 +1096,7 @@ button {
     
     resize: none; 
     transform: translateX(-50%);
-    /* transform: translate(-50%, -50%); */
+    transform: translate(-50%, -50%);
     transition: opacity 300ms, visibility 300ms;
     }
     @media only screen and (min-width: 768px) {
