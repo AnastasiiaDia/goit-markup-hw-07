@@ -1382,16 +1382,12 @@ button {
       color: var(--pressed-state-color);
     }
     .mobile-sm-list {
-      /* position: absolute;
-      top: 0;       */
-      /* position: absolute; */
-      
       height: 40px;  
       display: flex;      
       margin-left: auto;
       margin-right: auto;
       /* margin-top: 48px; */
-      gap: 56px;
+      /* gap: 56px; */
       justify-content: space-between;
      }
      .mobile-contacts {
