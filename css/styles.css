@@ -1077,30 +1077,43 @@ button {
     overflow: scroll;
     
   }
+  
   .modal {
     position: absolute;   
     min-height: 576px;    
     max-width: 392px;
     width: 91%;
-    height: 74%;
+    min-height: 584px;
     /* width: 408px;     */
-    top: 50%;
-    left: 50%;
+    /* top: 96px; */
+    top: 10%;
+    left: 50%; 
     padding: 75px 25px 24px 23px;
     background-color: rgba(252, 252, 252, 1);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px; 
     
     resize: none; 
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
+    /* transform: translate(-50%, -50%); */
     transition: opacity 300ms, visibility 300ms;
     }
     @media only screen and (min-width: 768px) {
       .modal {
        width: 408px;  
-      padding: 72px 24px 24px 24px; }
+       padding: 72px 24px 24px 24px;
+       }
+
     } 
-   .is-hidden {
+    @media only screen and (min-width: 768px) {
+      .modal {        
+        transform: translateX(-50%);
+      }
+    }
+    .modal {
+      top: 10%;
+    }
+    .is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
